@@ -1,0 +1,23 @@
+.container{
+    padding-top: 50px;
+}
+
+.quiz-time{
+    margin-top: 10px;
+    float: left;
+    display: flex;
+    width: max-content;
+    margin-bottom: 15px;
+}
+
+.quiz-time h2{
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.add-time{
+    min-width: 60px;
+    max-width: 80px;
+    border-radius: 0px;
+    margin-left: 30px;
+}

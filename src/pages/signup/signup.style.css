@@ -1,0 +1,139 @@
+
+
+
+.sign-up{
+    min-width: 70vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+    padding: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-container{
+    margin: auto;
+}
+
+.image-holder{
+    min-width: 45%;
+    background: url('../../icons/quiztime.jpg');
+    background-size: contain;
+}
+.form-control{
+    margin-left: 0;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.button{
+    background-color: #414141;
+    border: none;
+    color: white;
+}
+
+.button:hover{
+    background-color: #1d01bb;
+}
+
+.or-text{
+    font-size: 20px;
+    width: 100%;
+}
+.or-text::before,
+.or-text::after{
+    display: inline-block;
+    content: "";
+    border-top: 1px solid rgb(65, 64, 64);
+    width: 45%;
+    margin: 0;
+    
+}
+
+.google-btn{
+    background-image: url(../../icons/google-sign-in.png);
+    background-position: 35px 5px;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.github-btn{
+    background-image: url(../../icons/github-sign-in.jpg);
+    background-position: 24px 3px;
+    background-size: 45px;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-header{
+    display: flex;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.link-holder{
+    display: flex;
+    float: right;
+
+    margin-left: auto;
+    width: fit-content;
+}
+h4{
+    margin: 0;
+    margin-left: 10px;
+    font-size: 20px;
+}
+h1{
+    margin: 0;
+}
+.logo{
+    font-family: 'Aladin';
+}
+.links{
+    color: #707070;
+    font-size: 15px;
+}
+
+.links:hover{
+    color: #1d01bb;
+    text-decoration: none;
+}
+
+.active{
+    color: #1d01bb;
+}
+
+.lead{
+    font-size: 15px;
+}
+
+@media(max-width: 700px){
+    .sign-up{
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding-top: 20px;
+    }
+    .image-holder{
+        display: none;
+    }
+    .github-btn{
+        height: 50px;
+        background-position: 24px 10px;
+    }
+    .google-btn{
+        height: 50px;
+        background-position: 35px 10px;
+    }
+    .button{
+        height: 50px;
+    }
+    .logo{
+        font-size: 40px;
+        display: none;
+    }
+    .links{
+        font-size: 18px;
+    }
+}
