@@ -32,32 +32,7 @@ body{
     text-align: center;
 }
 
-div.timer{
-    background-color: #2c2c2c;
-    padding: 10px 10px 0px 10px;
-    width: fit-content;
-    height: 80px;
-    align-items: center;
-    position: sticky;
-    float: right;
-    right: 50px;
-    top: 50px;
-    border-radius: 50%;
-    z-index: 100;
-}
-.timer p{
-    margin: 0;
-    color: white;
-    text-align: center;
-}
-.timer h1{
-    font-size: 22px;
-    color: #cac9c9;
-    justify-content: center;
-    text-align: center;
-    width: fit-content;
-    margin: 0;
-}
+
 
 .question-box{
     margin: auto;

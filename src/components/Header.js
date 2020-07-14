@@ -7,9 +7,9 @@ function Header() {
     <header>
       <nav className="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
         {auth().currentUser ?
-          <Link className="navbar-brand hover-animation" to="/dashboard">Howdy</Link>
+          <Link className="navbar-brand hover-animation" to="/dashboard">Quizzer</Link>
           :
-          <Link className="navbar-brand hover-animation" to="/">Howdy</Link>
+          <Link className="navbar-brand hover-animation" to="/">Quizzer</Link>
         }
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>

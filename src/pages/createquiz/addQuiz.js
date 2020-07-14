@@ -48,6 +48,7 @@ class AddQuiz extends React.Component{
                 quizID: this.state.quizID,
                 questions: this.state.questions,
                 tester: this.state.user.displayName,
+                time: this.state.time,
                 uid: this.state.user.uid
            })
            console.log('done')
@@ -181,12 +182,14 @@ class AddQuiz extends React.Component{
                                         onChange={this.handleChange}
                                     />
                                 </div>
+                                <div className='options'>
                                 <button 
-                                    className="option-btn clicked"
+                                    className="option-btn hover-animation"
                                     onClick={this.addQuestion}
                                 >
-                                    ADD
+                                    Add Question
                                 </button>
+                                </div>
                                 
                                 
                             </div>
@@ -201,33 +204,33 @@ class AddQuiz extends React.Component{
     renderPreview = () =>{
         const {questions} = this.state
         return(
-            <div className="question-preview">
-                <h1>PREVIEW</h1>
+            <div className="">
+                <h1 className="preview-header">PREVIEW</h1>
                 {
-                    this.state.questions.length = 0 ?
-                    <h2>
+                    this.state.questions.length === 0 ?
+                    <h2 className='no-preview'>
                         No Questions has been added yet
                     </h2>
                     :
                     questions.map((quest, index) =>(
-                        <div className="question-box border">
+                        <div id={index} className="question-box border shadow">
                             <h5>Question {index+1}</h5>
                             {quest.question}
-                            <div className="button-container">
+                            <div className="button-container" style={{marginTop:'20px'}}>
                                 
-                                <div className='options border'>
+                                <div className='options border preview-options'>
                                     <label>A:</label><span>{quest.option1}</span>
                                 </div>
-                                <div className='options border'>
+                                <div className='options  border preview-options'>
                                     <label>B:</label><span>{quest.option2}</span>
                                 </div>
-                                <div className='options border'>
+                                <div className='options  border preview-options'>
                                     <label>C:</label><span>{quest.option3}</span>
                                 </div>
-                                <div className='options border'>
+                                <div className='options border preview-options'>
                                     <label>D:</label><span>{quest.option4}</span>
                                 </div>
-                                <div className='options border'>
+                                <div className='options border preview-options'>
                                     <label>Answer:</label><span>{quest.answer}</span>
                                 </div>
                             </div>
@@ -247,15 +250,17 @@ class AddQuiz extends React.Component{
                     <h1> Fill in the details to continue</h1>
                     <div  >
                         <form>
-                            <div style={{margin: 'auto'}}>    
-                                <h2>Quiz Title</h2>
-                                <input
-                                    className='form-control'
-                                    type= 'text'
-                                    name='title'
-                                    value={this.state.title}
-                                    onChange={this.handleChange}
-                                />
+                            <div  style={{margin: 'auto'}}>    
+                                <div className='quiz-title'>
+                                    <h2>Quiz Title - </h2>
+                                    <input
+                                        className='form-control'
+                                        type= 'text'
+                                        name='title'
+                                        value={this.state.title}
+                                        onChange={this.handleChange}
+                                    />
+                                </div>
                                 <div className= 'quiz-time'>
                                 <h2>Enter Time limit: </h2>
                                 <input
@@ -280,8 +285,9 @@ class AddQuiz extends React.Component{
                     }
                 </div>
                 <div>
+                    
                     <button 
-                        className="btn-primary"
+                        className="btn btn-primary hover-animation"
                         onClick={this.submitQuiz}>
                         Submit
                     </button>

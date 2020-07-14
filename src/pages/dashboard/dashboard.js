@@ -27,7 +27,7 @@ class Dashboard extends React.Component{
                 console.log('test', this.state.quizes)
             })
             setTimeout(()=>{
-                if (this.state.quizes.length != 0){
+                if (this.state.quizes.length !== 0){
                 setTimeout(this.filterQuiz, 500)
             }}, 1000)
             setTimeout(() =>{
@@ -43,9 +43,9 @@ class Dashboard extends React.Component{
     }
 
     filterQuiz = () =>{
-        const {quizes, quizTitle} = this.state
+        const {quizes, quizCode} = this.state
         const quizFilter = quizes.filter(quiz =>(
-            quiz.quizID.toLowerCase().includes(quizTitle.toLowerCase())
+            quiz.quizID.toLowerCase().includes(quizCode.toLowerCase())
         ))
         this.setState({
             quiz: quizFilter
@@ -109,11 +109,12 @@ class Dashboard extends React.Component{
                                     <h1>Search Quiz Code</h1>
                                     : 
                                     <div className="quiz-details">
+                                        {this.state.error}
                                             {this.state.quiz.map(quiz =>(
                                                 <div>
                                                     <p id='title'>Quiz Title: {quiz.quiztitle}</p>
                                                     <p>No of Question: {quiz.questions.length}</p>
-                                                    <p>Time Limit: </p>
+                                                    <p>Time Limit: {quiz.time} Mins</p>
                                                     <Link 
                                                         className="btn btn-primary hover-animation"
                                                         to={{
