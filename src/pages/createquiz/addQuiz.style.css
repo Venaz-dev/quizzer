@@ -1,7 +1,9 @@
 body{
     background-color: rgb(211, 209, 209);
 }
-.container{
+.create-container{
+    background-color: white;
+    margin: auto;
     padding-top: 50px;
     width: 80%;
     border-radius: 5px;
@@ -11,6 +13,7 @@ body{
 
 .quiz-title{
     display: flex;
+    margin-left: 20px;
     margin-bottom: 20px;
     margin-top: 20px;
 }
@@ -97,4 +100,42 @@ body{
 }
 .preview-border{
     border: 1px solid #353636 ;
+}
+
+.create-question-box{
+    
+    
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+@media(max-width: 700px){
+    .create-container{
+        width: 100vw; 
+        padding-top: 80px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    h2{
+        margin: auto;
+    }
+    .quiz-title{
+        flex-direction: column;
+    }
+
+    .form-control{
+        width: 100%;
+    }
+
+    .button-container{
+        flex-direction: column;
+    }
+    .options{
+        width: 100%;
+    }
 }

@@ -75,7 +75,7 @@ class Quiz extends React.Component {
           clearInterval(this.myInterval);
           this.setState({ timeOver: true, submitQuiz: true });
           this.checkAnswers();
-          document.getElementById("quiz-timer").style.display = "none";
+          document.getElementById("quiz-timer").style.display ="none";
         } else {
           this.setState(({ minutes }) => ({
             minutes: minutes - 1,
@@ -116,7 +116,7 @@ class Quiz extends React.Component {
         {this.state.message === "" ? null : <h2>{this.state.message}</h2>}
         <div>
           {submitQuiz ? (
-            <EndQuiz timeup={this.state.timeOver} score={this.state.score} />
+            <EndQuiz timeup={this.state.timeOver} score={this.state.score} overall={this.state.questions.length} />
           ) : (
             ListQuestion
           )}

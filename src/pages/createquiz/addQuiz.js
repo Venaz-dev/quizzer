@@ -112,9 +112,9 @@ class AddQuiz extends React.Component{
                 <div style={{borderBottom:'1px solid #757575', position:'relative'}}>
                     {errorMessage === '' ? null : <p className="error">{errorMessage}</p>}
                     {successMessage === '' ? null : <p className="success">{successMessage}</p>}
-                    {<h4>({this.state.questions.length}) Questions Added</h4>}
+                    <h4>({this.state.questions.length}) Questions Added</h4>
                         <form>
-                            <div className="question-box">
+                            <div className="create-question-box">
                                 <p>Question: 
                                     <input
                                         type= 'text'
@@ -246,15 +246,15 @@ class AddQuiz extends React.Component{
         return(
             <div >
                 <Header />
-                <div className="container">
+                <div className="create-container">
                     <h1> Fill in the details to continue</h1>
                     <div  >
                         <form>
                             <div  style={{margin: 'auto'}}>    
                                 <div className='quiz-title'>
-                                    <h2>Quiz Title - </h2>
+                                    <h2>Quiz Title  </h2>
                                     <input
-                                        className='form-control'
+                                        className='form-control title'
                                         type= 'text'
                                         name='title'
                                         value={this.state.title}
